@@ -1,0 +1,6 @@
+#!/bin/bash
+
+exec 2>&1
+exec chpst -u <%= node[:xonacatl][:user][:user] %> \
+     <%= node['go']['gobin'] %>/xonacatl_server \
+     -config <%= node[:xonacatl][:cfg_path] + "/" + node[:xonacatl][:cfg_file] %>
