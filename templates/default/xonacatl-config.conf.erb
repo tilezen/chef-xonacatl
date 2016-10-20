@@ -4,3 +4,6 @@ pattern <%= node[:xonacatl][:pattern] %>
 <% node[:xonacatl][:headers].each do |header| -%>
 header <%= header %>
 <% end %>
+<% if node[:xonacatl][:healthcheck] -%>
+healthcheck <%= node[:xonacatl][:healthcheck] %>
+<% end %>

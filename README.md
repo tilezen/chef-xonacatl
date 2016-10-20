@@ -66,6 +66,12 @@ Attributes
     <td><tt>[]</tt></td>
   </tr>
   <tr>
+    <td><tt>['xonacatl']['healthcheck']</tt></td>
+    <td>String</td>
+    <td>Optional. If present, then the path to respond to healthchecks on.</td>
+    <td><tt>nil</tt></td>
+  </tr>
+  <tr>
     <td><tt>['xonacatl']['runit']['timeout']</tt></td>
     <td>Integer</td>
     <td>The time in seconds runit should wait to see if a service starts up successfully.</td>
