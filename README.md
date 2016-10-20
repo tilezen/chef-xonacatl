@@ -60,6 +60,12 @@ Attributes
     <td><tt>:80</tt></td>
   </tr>
   <tr>
+    <td><tt>['xonacatl']['headers']</tt></td>
+    <td>Array of String</td>
+    <td>Optional. Any extra headers to add when making requests to the origin.</td>
+    <td><tt>[]</tt></td>
+  </tr>
+  <tr>
     <td><tt>['xonacatl']['runit']['timeout']</tt></td>
     <td>Integer</td>
     <td>The time in seconds runit should wait to see if a service starts up successfully.</td>
