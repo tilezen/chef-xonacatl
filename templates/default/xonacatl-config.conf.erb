@@ -1,6 +1,7 @@
-host <%= node[:xonacatl][:host] %>
 listen <%= node[:xonacatl][:listen] %>
-pattern <%= node[:xonacatl][:pattern] %>
+<% node[:xonacatl][:patterns].each do |pattern,origin| -%>
+pattern <%= pattern %> -> <%= origin %>
+<% end %>
 <% node[:xonacatl][:headers].each do |header| -%>
 header <%= header %>
 <% end %>

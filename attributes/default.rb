@@ -5,9 +5,10 @@ default[:xonacatl][:package] = 'github.com/tilezen/xonacatl/xonacatl_server'
 default[:xonacatl][:cfg_file] = 'xonacatl.conf'
 default[:xonacatl][:cfg_path] = '/etc/xonacatl'
 
-default[:xonacatl][:host] = 'http://upstream.tile.server/{layers}/{z:[0-9]+}/{x:[0-9]+}/{y:[0-9]+}.{fmt}'
 default[:xonacatl][:listen] = ':80'
-default[:xonacatl][:pattern] = '/{layers}/{z:[0-9]+}/{x:[0-9]+}/{y:[0-9]+}.{fmt}'
+default[:xonacatl][:patterns] = {
+  '/{layers}/{z:[0-9]+}/{x:[0-9]+}/{y:[0-9]+}.{fmt}' => 'http://upstream.tile.server/{layers}/{z:[0-9]+}/{x:[0-9]+}/{y:[0-9]+}.{fmt}'
+}
 default[:xonacatl][:headers] = []
 
 default[:xonacatl][:runit][:timeout] = 60
