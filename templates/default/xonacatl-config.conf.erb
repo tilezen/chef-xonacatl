@@ -1,10 +1,6 @@
 listen <%= node[:xonacatl][:listen] %>
-<% node[:xonacatl][:patterns].each do |pattern,origin| -%>
-pattern <%= pattern %> -> <%= origin %>
-<% end %>
-<% node[:xonacatl][:headers].each do |header| -%>
-header <%= header %>
-<% end %>
+patterns <%= node[:xonacatl][:patterns].to_json %>
+headers <%= node[:xonacatl][:headers].to_json %>
 <% if node[:xonacatl][:healthcheck] -%>
 healthcheck <%= node[:xonacatl][:healthcheck] %>
 <% end %>
