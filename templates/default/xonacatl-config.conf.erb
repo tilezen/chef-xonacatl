@@ -4,3 +4,6 @@ headers <%= node[:xonacatl][:headers].to_json %>
 <% if node[:xonacatl][:healthcheck] -%>
 healthcheck <%= node[:xonacatl][:healthcheck] %>
 <% end %>
+<% if node[:xonacatl][:noforward] -%>
+noforward <%= node[:xonacatl][:noforward].to_json %>
+<% end %>
